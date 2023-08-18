@@ -13,7 +13,7 @@ We need to create a simple leave management system where the user can request le
     1. the required data is posted
     2. Start date is not greater than end date
     3. Start date is not in the past
-    4. User is allowed to book annual leave only within the leave policy allowance. For this one we use a `LeavePolicy` to determine if the user is allowed to book the leave. So for example if the user has booked 4 leaves and the total days are 20 and the allowance is 25 days, the user can not book a leave that is more than 5 days.
+    4. User is allowed to book annual leave only within the leave policy allowance. For this one we use a `LeavePolicy` to determine if the user is allowed to book the leave. So for example if the user has requested 4 leaves and the total days are 20 and the allowance is 25 days, the user can not book a leave that is more than 5 days.
 - GET handler returns all the created leaves
 
 2. Create a new page which shows the leaves in the tabular view and provides a form for booking new leaves.
