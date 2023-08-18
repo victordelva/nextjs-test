@@ -13,12 +13,14 @@ We need to create a simple leave management system where the user can request le
     1. the required data is posted
     2. Start date is not greater than end date
     3. Start date is not in the past
-    4. User is allowed to book the leave based on the duration of the leave. For this one we use a `LeavePolicy` to determine if the user is allowed to book the leave. So for example if the user has booked 4 leaves and the total days are 20 and the allowance is 25 days, the user can not book a leave that is more than 5 days.
+    4. User is allowed to book annual leave only within the leave policy allowance. For this one we use a `LeavePolicy` to determine if the user is allowed to book the leave. So for example if the user has booked 4 leaves and the total days are 20 and the allowance is 25 days, the user can not book a leave that is more than 5 days.
 - GET handler returns all the created leaves
 
 2. Create a new page which shows the leaves in the tabular view and provides a form for booking new leaves.
 
-#### Video
+#### Screenshot
+<img width="1723" alt="Screenshot 2023-08-18 at 16 25 20" src="https://github.com/givver-io/interview-leave-manager-app/assets/1299647/c0898150-5e8f-43fb-a3ca-b215c26ff228">
+
 
 ### Other considerations
 
