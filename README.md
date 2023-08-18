@@ -25,6 +25,7 @@ We need to create a simple leave management system where the user can request le
 ### Other considerations
 
 - For storing the data for simplicity you can store in memory (i.e. array, object etc.).
+- For styling as we are using Tailwind, you can use components from https://flowbite.com/docs/components
 
 ## Getting Started
 
