@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Exercise details
+
+## Problem (requirements)
+
+We need to create a simple leave management system where the user can request leave by inputting dates and we book the leave based on the leave policy. The user needs to see the booked leaves on the user interface.
+
+## Solution
+
+1. Create a new `leave` API (/api/leave) that handles creating and reading all the booked leaves. It has a POST and GET handler:
+
+- POST handler creates a new leave based on the start and end date
+  - Validates input to make sure:
+    1. the required data is posted
+    2. Start date is not greater than end date
+    3. Start date is not in the past
+    4. User is allowed to book the leave based on the duration of the leave. For this one we use a `LeavePolicy` to determine if the user is allowed to book the leave. So for example if the user has booked 4 leaves and the total days are 20 and the allowance is 25 days, the user can not book a leave that is more than 5 days.
+- GET handler returns all the created leaves
+
+2. Create a new page which shows the leaves in the tabular view and provides a form for booking new leaves.
+
+#### Video
+
+### Other considerations
+
+- For storing the data for simplicity you can store in memory (i.e. array, object etc.).
 
 ## Getting Started
 
