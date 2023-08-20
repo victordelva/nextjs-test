@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Modal show={isOpen} onClose={() => setIsOpen(false)}>
-        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Header>Create a Leave</Modal.Header>
         <Modal.Body>
           <CreateLeaveForm
             onClose={() => setIsOpen(false)}
