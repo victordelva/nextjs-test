@@ -1,11 +1,12 @@
 import { randomUUID } from 'crypto';
-import { Leave } from '@/domain/entities/leave';
+import {Leave, LeaveInterface} from '@/domain/entities/Leave';
 import { Store } from '@/domain/interfaces/store';
 
-export class LeaveMemoryStore implements Store<Leave> {
-  constructor(protected leaves: Leave[] = []) {}
-  create(leave: Omit<Leave, 'id'>) {
-    const newLeave: Leave = {
+export class LeaveMemoryStore implements Store<LeaveInterface> {
+  constructor(protected leaves: LeaveInterface[] = []) {
+  }
+  create(leave: Omit<LeaveInterface, 'id'>) {
+    const newLeave: LeaveInterface = {
       id: randomUUID(),
       ...leave,
     };
